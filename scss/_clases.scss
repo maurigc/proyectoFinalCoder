@@ -1,0 +1,35 @@
+// Mixin para estilos y tamaño de fuente
+
+@mixin estilos($fuente, $tamaño){
+	font-family: $fuente;
+	font-size: $tamaño;
+}
+
+// Mixin para modificar el tamaño
+
+@mixin tamaño($ancho, $alto){
+	width: $ancho;
+	height: $alto;
+}
+
+// Map de colores de fuente
+
+$colores:(
+	naranja: #FFB72B,
+	verdeClaro: #B5FE83,
+	grisClaro: #F7F7F7,
+);
+
+.botones{
+	padding: 10px 15px;
+	font-weight: bold;
+	color: map-get($colores, grisClaro);
+	@include estilos(noto sans, 20px);
+	background-color: map-get($colores, naranja);
+}
+
+.estilosHover{
+	background-color: orange;
+	color: map-get($colores, grisClaro);
+	text-decoration: none;
+}

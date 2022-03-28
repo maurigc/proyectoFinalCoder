@@ -1,0 +1,11 @@
+
+header{
+	background-color: map-get($colores, verdeClaro);
+	.imagenLogo{
+		@include tamaño(100px, 100px);
+	}
+}
+
+.color{ /*retoque color items nav*/
+	text-shadow: $sombra;
+}

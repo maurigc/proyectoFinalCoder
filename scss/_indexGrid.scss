@@ -1,0 +1,140 @@
+// Grid para acomodar header, main y footer del index
+
+.grid{
+	display: grid;
+	grid-template-areas:
+	"encabezado encabezado"
+	"principal principal"
+	"pie pie";
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto auto;
+}
+
+
+.encabezado{
+	grid-area: encabezado;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	.encabezadoLogo{
+		padding: 10px 30px;
+	}
+	.encabezadoNav{
+		padding: 0px 10px;
+		ul{
+			display: flex;
+			flex-direction: row;
+			li{
+				list-style: none;
+				padding:0px 5px;
+				a{
+					text-decoration: none;
+					color: gray;
+					font-weight: bold;
+					text-shadow: $sombra;
+					&:hover{
+						color: black;
+					}
+
+				}
+			}	
+		}
+	}
+
+}
+
+.principalIndex{  // Grid adentro de otro grid para acomodar main del Index
+	grid-area: principal;
+	display: grid;
+	grid-template-areas: 
+	"texto img"
+	"boton boton";
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto;
+	padding: 10px;
+}
+
+.text{
+	grid-area: texto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.img{
+	grid-area:img;
+	display: flex;
+	justify-content: center;
+	padding: 20px 5px;
+	img{
+		border-radius: 10px;
+		box-shadow: 1px 1px 10px gray;
+	}
+}
+
+.buttons{
+	grid-area:boton;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 30px;
+	.button-1{     // Modificacion del boton CONÓCENOS
+		padding: 0px 5px;
+		.boton_conocer{
+			@extend .botones;
+			&:hover{
+				@extend .estilosHover;
+			}
+		}
+	}
+	.button-2{		// Modificacion del boton CONTÁCTANOS
+		.boton_contacto{
+			@extend .botones;
+			&:hover{
+				@extend .estilosHover;
+			}
+		}
+	}
+}
+
+
+
+.piePagina{      // Grid adentro de otro para el footer vista desktop
+	grid-area: pie;
+	display: grid;
+	grid-template-areas:
+	"imgFoo nombreFoo redesFoo"
+	"pieFoo pieFoo pieFoo";
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto;
+	padding-top: 20px;
+	a{
+		text-decoration: none;
+	}
+}
+
+.imgFoo{
+	grid-area: imgFoo;
+}
+
+.nombreFoo{
+	grid-area: nombreFoo;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.redesFoo{
+	grid-area: redesFoo;
+}
+
+.pieFoo{
+	grid-area: pieFoo;
+	padding-top: 10px;
+	h3{
+		color: map-get($colores, grisClaro);
+		background-color: gray;
+	}
+}
+

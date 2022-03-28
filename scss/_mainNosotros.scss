@@ -1,0 +1,27 @@
+.mod_tituloNosotros{
+	border-right: 5px solid #FFB72B;
+	@include estilos(oswald, 60px);
+	@media only screen and (max-width: 768px){
+		font-size: 30px;
+	}
+}
+
+.mod_fuente{
+	@include estilos(oswald, 60px);
+	color: map-get($colores, naranja);
+	@media only screen and (max-width: 768px){
+		font-size: 40px;
+	}
+}
+
+.alineado{
+	text-align: center;
+}
+
+.mod_titulo{
+	border-left: 5px solid map-get($colores,naranja);
+	@include estilos(oswald, 60px);
+	@media only screen and (max-width: 768px){
+		font-size: 30px;
+	}
+}

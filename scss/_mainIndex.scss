@@ -1,0 +1,60 @@
+
+
+.mod_titulo{
+	border-left: 5px solid map-get($colores,naranja);
+	@include estilos(oswald, 60px);
+	@media only screen and (max-width: 768px){
+		font-size: 30px;
+	}
+}
+
+.mod_texto{ 
+	font-family: noto sans;
+}
+
+
+.flex{ /*centrado de texto index*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.img-sizing{ /*modificacion tamaño imagen index*/
+	@include tamaño(90px, 90px);
+}
+
+
+// Modificacion de los botones en index
+
+main{
+	div{
+		padding: 10px;
+		.button-1{     // Modificacion del boton CONÓCENOS
+			justify-content: flex-end;
+			.boton_conocer{
+				@extend .botones;
+				&:hover{
+					@extend .estilosHover;
+				}
+			}
+			@media only screen and (max-width: 768px){
+				justify-content: center;
+				padding-bottom: 5px;
+			}
+		}
+		.button-2{		// Modificacion del boton CONTÁCTANOS
+			justify-content: flex-start;
+			.boton_contacto{
+				@extend .botones;
+				&:hover{
+					@extend .estilosHover;
+				}
+			}
+			@media only screen and (max-width: 768px){
+				justify-content: center;
+			}			
+		}
+	}
+}
+
+

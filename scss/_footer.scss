@@ -1,0 +1,23 @@
+
+footer{
+	background-color: map-get($colores,verdeClaro);
+	.imagenLogo{
+		@include tamaño(100px, 100px);
+	}
+	.pieFooter{
+		font-size: 15px;
+		margin-bottom: 0px;
+	}
+	.mod_nombreFoo h2{
+		@include estilos(oswald, 40px);
+		text-align: center;
+		@media only screen and (max-width: 768px){
+			font-size: 30px;
+			}
+		}
+	.mod_redes img{
+		padding: 20px;
+	}
+
+}
+

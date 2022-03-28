@@ -1,0 +1,200 @@
+.botones, .buttons .button-1 .boton_conocer, .buttons .button-2 .boton_contacto {
+  padding: 10px 15px;
+  font-weight: bold;
+  color: #F7F7F7;
+  font-family: noto sans;
+  font-size: 20px;
+  background-color: #FFB72B; }
+
+.estilosHover, .buttons .button-1 .boton_conocer:hover, .buttons .button-2 .boton_contacto:hover {
+  background-color: orange;
+  color: #F7F7F7;
+  text-decoration: none; }
+
+header {
+  background-color: #B5FE83; }
+  header .imagenLogo {
+    width: 100px;
+    height: 100px; }
+
+.color {
+  /*retoque color items nav*/
+  text-shadow: 1px 1px 1px #F7F7F7; }
+
+.grid {
+  display: grid;
+  grid-template-areas: "encabezado encabezado" "principal principal" "pie pie";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto; }
+
+.encabezado {
+  grid-area: encabezado;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .encabezado .encabezadoLogo {
+    padding: 10px 30px; }
+  .encabezado .encabezadoNav {
+    padding: 0px 10px; }
+    .encabezado .encabezadoNav ul {
+      display: flex;
+      flex-direction: row; }
+      .encabezado .encabezadoNav ul li {
+        list-style: none;
+        padding: 0px 5px; }
+        .encabezado .encabezadoNav ul li a {
+          text-decoration: none;
+          color: gray;
+          font-weight: bold;
+          text-shadow: 1px 1px 1px #F7F7F7; }
+          .encabezado .encabezadoNav ul li a:hover {
+            color: black; }
+
+.principalIndex {
+  grid-area: principal;
+  display: grid;
+  grid-template-areas: "texto img" "boton boton";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  padding: 10px; }
+
+.text {
+  grid-area: texto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.img {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  padding: 20px 5px; }
+  .img img {
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px gray; }
+
+.buttons {
+  grid-area: boton;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px; }
+  .buttons .button-1 {
+    padding: 0px 5px; }
+
+.piePagina {
+  grid-area: pie;
+  display: grid;
+  grid-template-areas: "imgFoo nombreFoo redesFoo" "pieFoo pieFoo pieFoo";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  padding-top: 20px; }
+  .piePagina a {
+    text-decoration: none; }
+
+.imgFoo {
+  grid-area: imgFoo; }
+
+.nombreFoo {
+  grid-area: nombreFoo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.redesFoo {
+  grid-area: redesFoo; }
+
+.pieFoo {
+  grid-area: pieFoo;
+  padding-top: 10px; }
+  .pieFoo h3 {
+    color: #F7F7F7;
+    background-color: gray; }
+
+.mod_tituloNosotros {
+  border-right: 5px solid #FFB72B;
+  font-family: oswald;
+  font-size: 60px; }
+  @media only screen and (max-width: 768px) {
+    .mod_tituloNosotros {
+      font-size: 30px; } }
+
+.mod_fuente {
+  font-family: oswald;
+  font-size: 60px;
+  color: #FFB72B; }
+  @media only screen and (max-width: 768px) {
+    .mod_fuente {
+      font-size: 40px; } }
+
+.alineado {
+  text-align: center; }
+
+.mod_titulo {
+  border-left: 5px solid #FFB72B;
+  font-family: oswald;
+  font-size: 60px; }
+  @media only screen and (max-width: 768px) {
+    .mod_titulo {
+      font-size: 30px; } }
+
+footer {
+  background-color: #B5FE83; }
+  footer .imagenLogo {
+    width: 100px;
+    height: 100px; }
+  footer .pieFooter {
+    font-size: 15px;
+    margin-bottom: 0px; }
+  footer .mod_nombreFoo h2 {
+    font-family: oswald;
+    font-size: 40px;
+    text-align: center; }
+    @media only screen and (max-width: 768px) {
+      footer .mod_nombreFoo h2 {
+        font-size: 30px; } }
+  footer .mod_redes img {
+    padding: 20px; }
+
+@media only screen and (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-areas: "encabezado" "principal" "pie";
+    grid-template-columns: 100%;
+    grid-template-rows: auto; }
+  .encabezado {
+    grid-area: encabezado;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .encabezado nav ul {
+      padding: 5px 0px; }
+  .principalIndex {
+    grid-area: principal;
+    display: grid;
+    grid-template-areas: "texto" "img" "boton";
+    grid-template-columns: 100%;
+    grid-template-rows: auto; }
+  .text {
+    grid-area: texto;
+    padding: 10px 5px; }
+  .img {
+    grid-area: img;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 5px; }
+    .img img {
+      border-radius: 10px;
+      box-shadow: 1px 1px 10px gray; }
+  .buttons {
+    grid-area: boton;
+    padding: 20px 5px; }
+  .piePagina {
+    grid-area: pie;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .piePagina div {
+      padding: 5px 0px; } }
